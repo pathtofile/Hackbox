@@ -34,4 +34,7 @@ RUN apt-get update && apt-get install -y \
     proxychains     \
     net-tools
 
+# Setup anything else
+RUN echo "alias ll='ls --color=auto -l'" >> ~/.bashrc
+
 CMD ["/bin/bash"]

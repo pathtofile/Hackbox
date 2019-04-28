@@ -34,6 +34,9 @@ RUN apt-get update && apt-get install -y \
     proxychains     \
     net-tools
 
+RUN python3 -m pip install \
+    mitmproxy
+
 # Setup anything else
 RUN echo "alias ll='ls --color=auto -l'" >> ~/.bashrc
 

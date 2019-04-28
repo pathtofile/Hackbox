@@ -12,6 +12,8 @@ This Docker Image sets up a small-ish container built on the Kali base image, wi
  - ProxyChains
  - Npm (for any node.js stuff)
  - net-tools (for `ifconfig`, etc.)
+ - mitmproxy
+ - Adds alias `ll='ls --color=auto -l'` into `~/.bashrc`
  - Set `/bin/bash` as the entrypoint
 
 

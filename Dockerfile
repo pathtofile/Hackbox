@@ -37,7 +37,14 @@ RUN apt-get update && apt-get install -y \
 RUN python3 -m pip install \
     mitmproxy
 
+# Install and setup DNS over TLS
+RUN apt-get update && apt-get install -y stubby
+COPY stubby.yml /etc/stubby/stubby.yml
+
 # Setup anything else
 RUN echo "alias ll='ls --color=auto -l'" >> ~/.bashrc
 
-CMD ["/bin/bash"]
+# Copy And start startup script
+COPY startup.sh /startup.sh
+
+CMD ["/bin/bash", "/startup.sh"]

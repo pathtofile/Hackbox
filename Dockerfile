@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y \
     gobuster        \
     npm             \
     proxychains     \
+    openvpn         \
     net-tools
 
 RUN python3 -m pip install \
